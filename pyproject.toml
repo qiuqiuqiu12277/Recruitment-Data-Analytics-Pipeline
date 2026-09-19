@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recruitment-data-analytics-pipeline"
+version = "0.2.0"
+description = "A reproducible pipeline for extracting and analysing recruitment data."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "qiuqiuqiu12277"}]
+dependencies = [
+  "matplotlib>=3.6,<4",
+  "numpy>=1.23,<3",
+  "pandas>=1.5,<3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7,<9",
+  "pytest-cov>=4,<7",
+  "ruff>=0.6,<1",
+]
+
+[project.scripts]
+recruitment-pipeline = "recruitment_pipeline.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
