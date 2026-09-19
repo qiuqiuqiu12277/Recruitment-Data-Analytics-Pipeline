@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Jupyter and editors
+.ipynb_checkpoints/
+.DS_Store
+.idea/
+.vscode/
+
+# Generated pipeline output
+outputs/
+data/processed_jobs.csv
+
