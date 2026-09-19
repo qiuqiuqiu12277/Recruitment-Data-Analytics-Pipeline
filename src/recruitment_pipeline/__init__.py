@@ -12,17 +12,33 @@ from .features import (
 )
 from .pipeline import PipelineResult, run_pipeline
 from .preprocessing import preprocess_jobs
+from .review import (
+    ApprovalResult,
+    ExportResult,
+    ReviewPackageResult,
+    WorkflowError,
+    approve_review_queue,
+    create_review_package,
+    export_approved_jobs,
+)
 from .schema import SchemaValidationError, validate_job_schema
 
 __all__ = [
     "DEFAULT_SKILLS",
+    "ApprovalResult",
     "ExperienceRange",
+    "ExportResult",
     "PipelineResult",
+    "ReviewPackageResult",
     "SchemaValidationError",
     "SkillExtractor",
+    "WorkflowError",
+    "approve_review_queue",
     "build_summary",
     "calculate_ctr",
     "create_charts",
+    "create_review_package",
+    "export_approved_jobs",
     "extract_experience_range",
     "extract_features",
     "extract_skills",
@@ -32,4 +48,4 @@ __all__ = [
     "validate_job_schema",
 ]
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"

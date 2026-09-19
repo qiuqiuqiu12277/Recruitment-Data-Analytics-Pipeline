@@ -21,4 +21,4 @@ jobs:
       - run: ruff check .
       - run: ruff format --check .
       - run: pytest --cov=recruitment_pipeline --cov-report=term-missing
-      - run: recruitment-pipeline demo --rows 10 --seed 42 --no-charts
+      - run: recruitment-pipeline workflow-demo --rows 10 --seed 42 --no-charts
